@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BobbyScript : MonoBehaviour
 {
@@ -90,9 +91,25 @@ public class BobbyScript : MonoBehaviour
     }
 
 
+    // adapt the current killBobby method thus…
+    //
     public void killBobby()
     {
         myAnimator.runtimeAnimatorController = dieAnimation;
         isDead = true;
+        StartCoroutine(jumpToFirstLevelAfter3Seconds(3));
     }
+
+    // add this new method in
+    // it does the waiting for 3 seconds
+    IEnumerator jumpToFirstLevelAfter3Seconds(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        // Code to execute after the delay
+
+        SceneManager.LoadSceneAsync("Scenes/Menu");
+    }
+
 }
+

@@ -54,11 +54,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BobbyScript.cs" />
-    <Compile Include="Assets\Scripts\TrackPlayerScript.cs" />
-    <Compile Include="Assets\Scripts\ScoreScript.cs" />
-    <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\CollectableScript.cs" />
+    <Compile Include="Assets\Scripts\TrackPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\InflictDamageScript.cs" />
+    <Compile Include="Assets\Scripts\NextLevelScript.cs" />
+    <Compile Include="Assets\Scripts\PlayButtonScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
